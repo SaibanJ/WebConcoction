@@ -91,7 +91,7 @@ const plansSecond = [
 
     return (
      <section id="pricing" className="py-16 px-4 bg-gray-50">
-         <div className="container mx-auto">
+         <div className=" mx-auto">
              <h2 className="text-3xl font-bold text-center  text-gray-900 mb-12">Simple, Transparent Pricing</h2>
              <Tabs defaultValue="tab1">
                  <TabsList className="flex justify-center" aria-label="Manage your account">

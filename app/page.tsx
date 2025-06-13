@@ -157,7 +157,7 @@ export default function HomePage() {
 
       {/* Services Section */}
       <section id="services" className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
+        <div className=" px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <Badge className="text-gray-900" variant="outline">Our Services</Badge>
@@ -235,7 +235,7 @@ export default function HomePage() {
 
       {/* Features Section */}
       <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
-        <div className="container px-4 md:px-6">
+        <div className=" px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <Badge variant="outline" className="text-gray-900">Why Choose Us</Badge>
@@ -307,7 +307,7 @@ export default function HomePage() {
 
       {/* Testimonials Section */}
       <section className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
+        <div className=" px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <Badge variant="outline" className="text-gray-900">Testimonials</Badge>
@@ -392,7 +392,7 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="container px-4 md:px-6">
+        <div className=" px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center text-white">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Ready to Launch Your Website?</h2>
@@ -420,7 +420,7 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12 px-4">
-        <div className="container mx-auto text-center">
+        <div className=" mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Zap className="h-6 w-6" />
             <span className="text-xl font-bold">WebConcoction</span>
