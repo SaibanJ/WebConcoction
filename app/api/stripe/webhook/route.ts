@@ -4,7 +4,7 @@ import Stripe from "stripe"
 import { MongoClient } from "mongodb"
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2024-06-20",
+  apiVersion: "2025-05-28.basil",
 })
 
 const client = new MongoClient(process.env.MONGODB_URI!)

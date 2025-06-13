@@ -391,3 +391,145 @@ Contact
     </div>
 )
 }
+
+++++++
+
+
+"use client"
+
+import { useState } from "react"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Check } from "lucide-react"
+
+export default function PricingToggle() {
+const [billingPeriod, setBillingPeriod] = useState<"annually" | "monthly">("annually")
+
+const pricingPlans = [
+{
+name: "Basic",
+description: "Essential features for individuals",
+annually: {
+price: "$99",
+period: "/year",
+savings: "Save $21 compared to monthly",
+features: ["1 user", "5GB storage", "Basic support", "Core features"],
+},
+monthly: {
+price: "$10",
+period: "/month",
+savings: "",
+features: ["1 user", "5GB storage", "Basic support", "Core features"],
+},
+},
+{
+name: "Pro",
+description: "Perfect for small teams",
+annually: {
+price: "$199",
+period: "/year",
+savings: "Save $41 compared to monthly",
+features: ["5 users", "20GB storage", "Priority support", "All features", "Advanced analytics"],
+},
+monthly: {
+price: "$20",
+period: "/month",
+savings: "",
+features: ["5 users", "20GB storage", "Priority support", "All features", "Advanced analytics"],
+},
+},
+{
+name: "Enterprise",
+description: "For larger organizations",
+annually: {
+price: "$499",
+period: "/year",
+savings: "Save $101 compared to monthly",
+features: [
+"Unlimited users",
+"100GB storage",
+"24/7 support",
+"All features",
+"Advanced analytics",
+"Custom integrations",
+],
+},
+monthly: {
+price: "$50",
+period: "/month",
+savings: "",
+features: [
+"Unlimited users",
+"100GB storage",
+"24/7 support",
+"All features",
+"Advanced analytics",
+"Custom integrations",
+],
+},
+},
+]
+
+return (
+<div className="container mx-auto px-4 py-8">
+<div className="flex flex-col items-center mb-12">
+<h2 className="text-3xl font-bold mb-6">Pricing Plans</h2>
+
+        {/* Toggle Switch */}
+        <div className="inline-flex items-center rounded-full p-1 bg-gray-100 dark:bg-gray-800">
+          <button
+            onClick={() => setBillingPeriod("annually")}
+            className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+              billingPeriod === "annually"
+                ? "bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm"
+                : "text-gray-600 dark:text-gray-300"
+            }`}
+          >
+            Annually
+          </button>
+          <button
+            onClick={() => setBillingPeriod("monthly")}
+            className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+              billingPeriod === "monthly"
+                ? "bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm"
+                : "text-gray-600 dark:text-gray-300"
+            }`}
+          >
+            Monthly
+          </button>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {pricingPlans.map((plan, index) => (
+          <Card key={index} className="flex flex-col h-full">
+            <CardHeader>
+              <CardTitle>{plan.name}</CardTitle>
+              <CardDescription>{plan.description}</CardDescription>
+            </CardHeader>
+            <CardContent className="flex-grow">
+              <div className="flex items-baseline mb-4">
+                <span className="text-3xl font-bold">{plan[billingPeriod].price}</span>
+                <span className="ml-1 text-gray-500">{plan[billingPeriod].period}</span>
+              </div>
+              {plan[billingPeriod].savings && (
+                <p className="text-sm text-green-600 dark:text-green-400 mb-4">{plan[billingPeriod].savings}</p>
+              )}
+              <ul className="space-y-2">
+                {plan[billingPeriod].features.map((feature, i) => (
+                  <li key={i} className="flex items-center">
+                    <Check className="h-4 w-4 mr-2 text-green-500" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+            <CardFooter>
+              <Button className="w-full">Choose {plan.name}</Button>
+            </CardFooter>
+          </Card>
+        ))}
+      </div>
+    </div>
+)
+}
