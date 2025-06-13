@@ -143,7 +143,7 @@ export default function HomePage() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur-3xl opacity-20"></div>
                 <Image
-                    src="/placeholder-logo.svg?height=400&width=600"
+                    src="/hero.svg?height=400&width=600"
                     width="600"
                     height="400"
                     alt="Website showcase"
