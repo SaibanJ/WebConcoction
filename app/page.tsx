@@ -107,12 +107,12 @@ export default function HomePage() {
                   🚀 Professional Web Solutions
                 </Badge>
                 <h1 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-5xl xl:text-6xl/none">
-                  Build Stunning Websites with
-                  <span className="text-blue-600"> Reliable Hosting</span>
+                  Websites. Hosting.
+                  <span className="text-blue-600"> Done-For-You</span>
                 </h1>
                 <p className="max-w-[600px] text-gray-600 md:text-xl">
-                  From custom website design to lightning-fast hosting, we provide everything you need to establish a
-                  powerful online presence. Launch your dream website today.
+                  Web Concoction builds, hosts & maintains your website — no WordPress, no headaches.
+                  You run your business, we handle your site.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
