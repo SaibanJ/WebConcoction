@@ -10,7 +10,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "WebConcoction - Automated Web Hosting SaaS",
   description: "Professional web hosting with automated provisioning and management",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
